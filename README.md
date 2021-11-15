@@ -1,4 +1,4 @@
-# for migrate oman governorates and cities
+# Seed oman governorates and cities
 
 
 ---
