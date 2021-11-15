@@ -17,7 +17,6 @@ publish and run the migrations with:
 ```bash
 php artisan vendor:publish --tag="omancities-migrations"
 php artisan migrate
-php artisan omancities:seed
 ```
 
 seed cities to database:
