@@ -1,24 +1,25 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "gheith3/omancities",
+    "description": "for migrate oman governorates and cities",
     "keywords": [
-        ":vendor_name",
+        "gheith3",
         "laravel",
-        ":package_slug"
+        "omancities"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/gheith3/omancities",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Gheith Alrawahi",
+            "email": "alrawahi.gheith@gmil.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.0",
+        "illuminate/contracts": "^8.37",
         "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^8.37"
+        "spatie/laravel-translatable": "^5.0"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.10",
@@ -34,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Gheith3\\OmanCities\\": "src",
+            "Gheith3\\OmanCities\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Gheith3\\OmanCities\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,11 +55,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
-            }
+                "Gheith3\\OmanCities\\OmanCitiesServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
