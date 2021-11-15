@@ -1,6 +1,5 @@
 # Seed oman governorates and cities
 
-
 ---
 This repo can be used to scaffold Oman Governorates and cities.
 
@@ -39,6 +38,7 @@ echo $city->name;
 this package support <a href="https://github.com/spatie/laravel-translatable">spatie/laravel-translatable</a>
 ```php
 echo $governorate->name;
+//and can get by local
 echo $governorate->getTranslation("name", "ar");
 echo $city->getTranslation("name", "en");
 ```
