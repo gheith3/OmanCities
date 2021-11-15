@@ -35,7 +35,7 @@ $city = $governorate->cities()->first();
 echo $city->name;
 ```
 
-this package support <a href="https://github.com/spatie/laravel-translatable">spatie/laravel-translatable</a>
+this package is support fot <a href="https://github.com/spatie/laravel-translatable">spatie/laravel-translatable</a> package
 ```php
 echo $governorate->name;
 //and can get by local
