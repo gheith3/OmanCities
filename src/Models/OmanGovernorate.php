@@ -2,7 +2,6 @@
 
 namespace Gheith3\OmanCities\Models;
 
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -11,7 +10,9 @@ use Spatie\Translatable\HasTranslations;
 
 class OmanGovernorate extends Model
 {
-    use HasFactory, SoftDeletes, HasTranslations;
+    use HasFactory;
+    use SoftDeletes;
+    use HasTranslations;
 
     protected $table = "oman_governorates";
 
@@ -24,6 +25,4 @@ class OmanGovernorate extends Model
     {
         return $this->hasMany(OmanCity::class, "governorate_id");
     }
-
-
 }

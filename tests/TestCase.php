@@ -2,9 +2,9 @@
 
 namespace Gheith3\OmanCities\Tests;
 
+use Gheith3\OmanCities\OmanCitiesServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Gheith3\OmanCities\OmanCitiesServiceProvider;
 
 class TestCase extends Orchestra
 {

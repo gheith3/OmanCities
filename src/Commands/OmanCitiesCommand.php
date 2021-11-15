@@ -57,7 +57,7 @@ class OmanCitiesCommand extends Command
                         "longitude" => "",
                         "short_name" => "al-amrat",
                     ],
-                ]
+                ],
             ]
             , [
                 "name" => ["ar" => "ظفار", "en" => "Dhofar"],
@@ -125,7 +125,7 @@ class OmanCitiesCommand extends Command
                         "longitude" => "",
                         "short_name" => "al-mazuna",
                     ],
-                ]
+                ],
             ]
             , [
                 "name" => ["ar" => "مسندم", "en" => "Musandam"],
@@ -157,7 +157,7 @@ class OmanCitiesCommand extends Command
                         "longitude" => "",
                         "short_name" => "madha",
                     ],
-                ]
+                ],
             ]
             , [
                 "name" => ["ar" => "الشرقية جنوب", "en" => "Ash Sharqiyah South"],
@@ -195,7 +195,7 @@ class OmanCitiesCommand extends Command
                         "longitude" => "",
                         "short_name" => "masirah",
                     ],
-                ]
+                ],
             ]
             , [
                 "name" => ["ar" => "الشرقية شمال", "en" => "Ash Sharqiyah North"],
@@ -239,7 +239,7 @@ class OmanCitiesCommand extends Command
                         "longitude" => "",
                         "short_name" => "bidiyah",
                     ],
-                ]
+                ],
             ]
             , [
                 "name" => ["ar" => "الباطنة شمال", "en" => "Al Batinah North"],
@@ -283,7 +283,7 @@ class OmanCitiesCommand extends Command
                         "longitude" => "",
                         "short_name" => "shinas",
                     ],
-                ]
+                ],
             ]
             , [
                 "name" => ["ar" => "الباطنة شمال", "en" => "Al Batinah South"],
@@ -327,7 +327,7 @@ class OmanCitiesCommand extends Command
                         "longitude" => "",
                         "short_name" => "nakhal",
                     ],
-                ]
+                ],
             ]
             , [
                 "name" => ["ar" => "الداخلية", "en" => "Ad Dakhiliyah"],
@@ -383,7 +383,7 @@ class OmanCitiesCommand extends Command
                         "longitude" => "",
                         "short_name" => "bidbid",
                     ],
-                ]
+                ],
             ]
             , [
                 "name" => ["ar" => "الظاهرة", "en" => "Ad Dhahirah"],
@@ -409,7 +409,7 @@ class OmanCitiesCommand extends Command
                         "longitude" => "",
                         "short_name" => "dhank",
                     ],
-                ]
+                ],
             ]
             , [
                 "name" => ["ar" => "البريمي", "en" => "Al Buraimi"],
@@ -435,7 +435,7 @@ class OmanCitiesCommand extends Command
                         "longitude" => "",
                         "short_name" => "al-sinaynah",
                     ],
-                ]
+                ],
             ]
             , [
                 "name" => ["ar" => "الوسطى", "en" => "Al Wusta"],
@@ -467,12 +467,11 @@ class OmanCitiesCommand extends Command
                         "longitude" => "",
                         "short_name" => "al-jasir",
                     ],
-                ]
+                ],
             ]
             ,
         ];
     }
-
 
     public function seed()
     {
@@ -480,13 +479,13 @@ class OmanCitiesCommand extends Command
         foreach ($this->cities() as $city) {
             $gov = OmanGovernorate::updateOrCreate(
                 [
-                    "short_name" => $city['short_name']
+                    "short_name" => $city['short_name'],
                 ],
                 [
                     "short_name" => $city['short_name'],
                     "name" => [
                         "ar" => $city['name']['ar'],
-                        "en" => $city['name']['en']
+                        "en" => $city['name']['en'],
                     ],
                     "latitude" => $city['latitude'],
                     "longitude" => $city['longitude'],
@@ -506,7 +505,7 @@ class OmanCitiesCommand extends Command
                         "governorate_id" => $gov->id,
                         "name" => [
                             "ar" => $wilayat['name']['ar'],
-                            "en" => $wilayat['name']['en']
+                            "en" => $wilayat['name']['en'],
                         ],
                         "latitude" => $wilayat['latitude'],
                         "longitude" => $wilayat['longitude'],
@@ -522,6 +521,7 @@ class OmanCitiesCommand extends Command
     {
         $this->seed();
         $this->comment('All done');
+
         return self::SUCCESS;
     }
 }

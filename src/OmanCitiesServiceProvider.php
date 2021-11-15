@@ -2,9 +2,9 @@
 
 namespace Gheith3\OmanCities;
 
+use Gheith3\OmanCities\Commands\OmanCitiesCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Gheith3\OmanCities\Commands\OmanCitiesCommand;
 
 class OmanCitiesServiceProvider extends PackageServiceProvider
 {
