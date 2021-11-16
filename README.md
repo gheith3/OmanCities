@@ -35,11 +35,14 @@ $city = $governorate->cities()->first();
 echo $city->name;
 ```
 
-this package is support fot <a href="https://github.com/spatie/laravel-translatable">spatie/laravel-translatable</a> package
+this package is support for <a href="https://github.com/spatie/laravel-translatable">spatie/laravel-translatable</a> package
 ```php
 echo $governorate->name;
-//and can get by local
+
 echo $governorate->getTranslation("name", "ar");
+echo $governorate->getTranslation("name", "en");
+
+echo $city->getTranslation("name", "ar");
 echo $city->getTranslation("name", "en");
 ```
 
